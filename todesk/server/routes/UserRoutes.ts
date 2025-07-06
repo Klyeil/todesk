@@ -12,6 +12,27 @@ if (!JWT_SECRET) {
   throw new Error('JWT_SECRET 환경 변수가 설정되지 않았습니다.');
 }
 
+// 닉네임 중복 확인 엔드포인트
+router.post('/check-nickname', async (req: Request<{}, {}, { nickname: string }>, res: Response) => {
+    const { nickname } = req.body;
+  
+    if (!nickname) {
+      return res.status(400).json({ error: '닉네임이 필요합니다.' });
+    }
+  
+    try {
+      const existingUser = await User.findOne({ nickname: { $regex: new RegExp(`^${nickname}$`, 'i') } });
+      if (existingUser) {
+        return res.status(400).json({ error: '이미 사용 중인 닉네임입니다.' });
+      }
+      return res.status(200).json({ message: '사용 가능한 닉네임입니다.' });
+    } catch (error) {
+      console.error('Nickname check error:', error);
+      return res.status(500).json({ error: '서버 오류가 발생했습니다.' });
+    }
+  });
+
+
 // 회원가입 엔드포인트
 router.post('/signup', async (req: Request<{}, {}, UserInterface>, res: Response) => {
   const {
@@ -30,7 +51,7 @@ router.post('/signup', async (req: Request<{}, {}, UserInterface>, res: Response
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    return res.status(400).json({ error: '유효한 이메일 형식이 아�니다.' });
+    return res.status(400).json({ error: '유효한 이메일 형식이 아닙니다.' });
   }
 
   try {

@@ -112,3 +112,84 @@
     margin-top: 1rem;
   }
   
+/* 주소 검색 모달 스타일 - SignUpPage.css에 추가 */
+.address-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.address-modal-content {
+  background: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  height: 70vh;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.address-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.address-modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.close-button:hover {
+  background-color: #f0f0f0;
+}
+
+.address-search-container {
+  flex: 1;
+  padding: 0;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .address-modal-content {
+    width: 95%;
+    height: 80vh;
+    margin: 0 10px;
+  }
+  
+  .address-modal-header {
+    padding: 15px;
+  }
+  
+  .address-modal-header h3 {
+    font-size: 16px;
+  }
+}
