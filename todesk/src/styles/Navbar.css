@@ -1,0 +1,112 @@
+@import url('https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.css');
+
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: #fff;
+  z-index: 1000;
+  height: 80px;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+}
+
+.navbar .nav_logo {
+  margin-right: 60px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 42px;
+  height: auto;
+}
+
+.center-menu {
+  margin-left : 20px;
+  white-space: nowrap;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  flex: 0;
+}
+
+.center-menu li {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.center-menu a {
+  font-size: 16px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  transition: color 0.3s ease;
+}
+
+.center-menu a:hover {
+  color: #4F46E5;
+}
+
+
+.nav-right {
+  display: flex;
+  margin-left: auto;
+  gap: 40px;
+  align-items: center;
+}
+.right-signup li {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.right-signup a {
+  font-size: 16px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  transition: color 0.3s ease;
+}
+
+.nav-button {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.login-link {
+  background-color: #4F46E5;
+}
+
+.login-link:hover {
+  background-color: #4338CA;
+}
+
+.login-icon {
+  font-size: 20px;
+}
+
+.user-icon {
+  font-size: 20px;
+}
+
+.right-signup {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
