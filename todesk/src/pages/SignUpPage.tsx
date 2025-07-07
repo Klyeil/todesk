@@ -251,7 +251,7 @@ const SignUpPage: React.FC = () => {
             onChange={handleChange}
           />
         </div>
-        <button type="submit" className="submit-button" disabled={!passwordMatch || !isNicknameChecked}>
+        <button type="submit" className="signup-button" disabled={!passwordMatch || !isNicknameChecked}>
           회원가입
         </button>
       </form>

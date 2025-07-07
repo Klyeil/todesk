@@ -3,10 +3,10 @@ import mongoose, { Schema, Document } from 'mongoose';
 // 사용자 인터페이스
 export interface User extends Document {
   email: string;
-  password: string; // 나중에 bcrypt로 암호화 필요
+  password: string;
   name: string;
   nickname: string;
-  birthdate: string; // YYYY-MM-DD 형식
+  birthdate: string;
   phone: string;
   address: string;
 }
@@ -22,5 +22,4 @@ const UserSchema: Schema = new Schema({
   address: { type: String, required: true },
 });
 
-// 모델 내보내기
 export default mongoose.model<User>('User', UserSchema);

@@ -1,0 +1,114 @@
+.feed-upload-container {
+    max-width: 1000px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* 박스 섹션 */
+  .box-section {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+  }
+  
+  /* 이미지 업로드 */
+  .image-upload-area {
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: #ffffff;
+  }
+  
+  .image-upload-area p {
+    color: #6B7280;
+  }
+  
+  .image-upload-area:hover {
+    border-color: #007bff;
+  }
+  
+  .image-preview {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  .file-select-button {
+    margin: auto;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3b3e3e;
+    transition: background-color 0.3s ease;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .file-select-button:hover {
+    background-color : #000;
+  }
+  
+  /* 폼 그룹 */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 97%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  /* 업로드 버튼 */
+  .button-group {
+    text-align: center;
+  }
+  
+  .feed-submit-button {
+    width : 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: #3b3e3e;
+    transition: background-color 0.3s ease;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .feed-submit-button:hover {
+    background-color : #000;
+  }
+  
+  .upload-icon {
+    margin: 0 auto;
+    font-size: 50px;
+    color: #aaa;
+    margin-bottom: 10px;
+  }

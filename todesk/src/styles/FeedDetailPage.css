@@ -1,0 +1,118 @@
+/* 페이지 전체 스타일 */
+.feed-detail-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .feed-detail-container {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  .feed-detail-title {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-left: 9px;
+    color: #333;
+  }
+  
+  .feed-detail-meta {
+    text-align: left;
+    display: flex;
+    border-bottom : 1px solid #ddd;
+    padding-bottom : 10px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .feed-detail-author,
+  .feed-detail-date,
+  .feed-detail-views {
+    padding: 5px 10px;
+  }
+  
+  .feed-detail-image {
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+  
+  .feed-detail-image img {
+    max-width: 95%;
+    margin-right : 5px;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .feed-detail-content {
+    border-top: 1px solid #ddd;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    text-align: left;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #444;
+  }
+  
+  .feed-detail-comment-section {
+    margin-top: 20px;
+    margin-left: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .feed-detail-comment-section h3 {
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .feed-detail-add-comment-button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #3b3e3e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .feed-detail-add-comment-button:hover {
+    background-color: #000000;
+  }
+  
+  .feed-detail-back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .feed-detail-back-button:hover {
+    background-color: #000000;
+  }
+  
+  .feed-detail-loading {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .feed-detail-error-message {
+    color: #ff0000;
+    text-align: center;
+  }

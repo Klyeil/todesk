@@ -1,0 +1,95 @@
+/* 페이지 전체 스타일 */
+.post-creation-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  
+  .creation-main-title {
+    text-align: justify;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .post-creation-container {
+    width: 100%;
+    max-width: 800px; /* 작성 폼 크기 조정 */
+  }
+  
+  .post-creation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  /* 폼 스타일 */
+  .creation-form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: flex;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 97%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  textarea {
+    resize: none;
+    min-height: 200px;
+  }
+  
+  /* 버튼 그룹 */
+  .button-group {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px; /* 드롭다운과 버튼 간 간격 */
+  }
+  
+  .category-select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    background-color: #fff; /* 배경색 흰색으로 변경 */
+    cursor: pointer;
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #3b3e3e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #000000;
+  }
+  
+  .error-message {
+    color: #ff0000;
+    margin-bottom: 10px;
+    text-align: left;
+  }

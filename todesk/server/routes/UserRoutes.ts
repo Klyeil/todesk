@@ -6,7 +6,7 @@ import jwt from 'jsonwebtoken';
 
 const router: Router = express.Router();
 
-// JWT 비밀 키 (환경 변수 로드)
+// JWT 비밀 키
 const JWT_SECRET = process.env.JWT_SECRET;
 if (!JWT_SECRET) {
   throw new Error('JWT_SECRET 환경 변수가 설정되지 않았습니다.');
