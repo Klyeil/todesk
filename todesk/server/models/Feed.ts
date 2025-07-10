@@ -4,9 +4,12 @@ export interface Feed extends Document {
   title: string;
   content: string;
   createdAt: Date;
-  userId: string;
+  userId: Schema.Types.ObjectId;
   views: number;
   image: string;
+  author?: { // populate 결과 반영
+    nickname: string;
+  };
 }
 
 const feedSchema = new Schema({

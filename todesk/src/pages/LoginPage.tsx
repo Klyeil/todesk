@@ -34,7 +34,7 @@ const LoginPage: React.FC = () => {
             <input
               type="email"
               name="email"
-              className="input-field"
+              className="login-input-field"
               placeholder="honggildong@todesk.com"
               value={formData.email}
               onChange={handleChange}
@@ -45,7 +45,7 @@ const LoginPage: React.FC = () => {
             <input
               type="password"
               name="password"
-              className="input-field"
+              className="login-input-field"
               placeholder="8~16자의 영문 대/소문자, 숫자, 특수문자"
               value={formData.password}
               onChange={handleChange}
@@ -59,7 +59,7 @@ const LoginPage: React.FC = () => {
             <Link to="/find" className="find-link">이메일/비밀번호 찾기</Link>
           </div>
 
-          <button type="submit" className="submit-button">로그인</button>
+          <button type="submit" className="login-submit-button">로그인</button>
         </form>
       </div>
     </div>

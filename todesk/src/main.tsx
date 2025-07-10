@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App.tsx';
 import FeedPage from './pages/FeedPage.tsx';
+import MainPage from './pages/MainPage.tsx';
 import ConsultingPage from './pages/ConsultingPage.tsx';
 import CommunityPage from './pages/CommunityPage.tsx';
 import LoginPage from './pages/LoginPage.tsx';
@@ -19,6 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
+          <Route index element={<MainPage />} />
           <Route path="desk" element={<FeedPage />} />
           <Route path="desk/:id" element={<FeedDetailPage />} />
           <Route path="desk/upload" element={<FeedUpload />} />

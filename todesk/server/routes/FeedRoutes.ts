@@ -39,26 +39,54 @@ router.get('/', async (req: Request, res: Response) => {
   }
 });
 
-// 개별 피드 조회
-router.get('/:id', async (req: Request, res: Response) => {
+// 메인 페이지용 피드 조회 (최신 3개, 토큰 불필요)
+router.get('/main', async (req: Request, res: Response) => {
+  try {
+    const feeds = await Feed.find()
+      .populate('userId', 'nickname')
+      .sort({ createdAt: -1 })
+      .limit(3);
+    res.status(200).json(feeds);
+  } catch (error) {
+    console.error('Main feed fetch error:', error);
+    res.status(500).json({ error: '메인 피드 조회 실패' });
+  }
+});
+
+// 사용자별 피드 조회
+router.get('/user/:userId', async (req: Request, res: Response) => {
   try {
     const token = req.headers.authorization?.split(' ')[1];
     if (!token) {
       return res.status(401).json({ error: '인증 토큰이 필요합니다.' });
     }
-    jwt.verify(token, JWT_SECRET); // 토큰 검증 (필요 시 decoded 사용 가능)
+    jwt.verify(token, JWT_SECRET);
+    const userId = req.params.userId;
+    if (!mongoose.Types.ObjectId.isValid(userId)) {
+      return res.status(400).json({ error: '유효하지 않은 사용자 ID입니다.' });
+    }
+    const feeds = await Feed.find({ userId })
+      .populate('userId', 'nickname')
+      .sort({ createdAt: -1 });
+    res.status(200).json({ feeds });
+  } catch (error) {
+    console.error('User feed fetch error:', error);
+    res.status(500).json({ error: '사용자 피드 조회 실패' });
+  }
+});
+
+// 개별 피드 조회
+router.get('/:id', async (req: Request, res: Response) => {
+  try {
     const feed = await Feed.findById(req.params.id).populate('userId', 'nickname');
     if (!feed) {
       return res.status(404).json({ error: '피드를 찾을 수 없습니다.' });
     }
-    feed.views += 1; // 조회수 증가
+    feed.views += 1; // 인증 없이 조회수 증가
     await feed.save();
     res.status(200).json({ feed });
   } catch (error) {
     console.error('Feed fetch error:', error);
-    if (error instanceof jwt.JsonWebTokenError) {
-      return res.status(401).json({ error: '유효하지 않은 토큰입니다.' });
-    }
     res.status(500).json({ error: '피드 조회 실패' });
   }
 });

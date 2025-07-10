@@ -24,10 +24,8 @@ const FeedDetailPage: React.FC = () => {
   useEffect(() => {
     const fetchFeed = async () => {
       try {
-        const token = localStorage.getItem('token');
         const response = await axios.get<{ feed: Feed }>(
-          `http://localhost:5003/api/feeds/${id}`, // FeedRoutes.ts와 일치
-          { headers: { Authorization: `Bearer ${token}` } }
+          `http://localhost:5003/api/feeds/${id}` // 토큰 헤더 제거
         );
         setFeed(response.data.feed);
       } catch (err) {

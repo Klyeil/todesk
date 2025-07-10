@@ -65,7 +65,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3개 칼럼 */
     gap: 20px; /* 아이템 간 간격 */
-    width: 100%;
+    width: 94%;
     max-width: 1200px;
   }
   

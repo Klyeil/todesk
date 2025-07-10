@@ -17,7 +17,7 @@
   }
   
   /* 프로필 헤더 (이미지+닉네임) */
-  .sidebar-headerr {
+  .sidebar-header {
     margin-bottom: 30px;
     text-align: center;
   }
@@ -38,7 +38,7 @@
   }
   
   /* 사이드 메뉴 아이템 */
-  .menu-itemm {
+  .menu-item {
     width: 100%;
     font-size: 16px;
     color: #333;
@@ -63,7 +63,6 @@
     margin-left: 20px; /* 사이드바와 간격 */
     border-radius: 8px;
     margin: 0 auto;
-  
   }
   
   /* 에러 메시지 */
@@ -84,3 +83,37 @@
     font-size: 14px;
     margin-bottom: 10px;
   }
+
+/* 새 피드 섹션 (마이페이지 전용) */
+.my-feed-section {
+    margin-top : 20px;
+    width: 100%;
+  }
+  
+  .my-feed-grid {
+    display: grid;
+    width: 90%;
+    margin : 0 auto;
+    grid-template-columns: repeat(3, 1fr); /* 한 줄에 3개 */
+    gap: 20px;
+  }
+  
+  .my-feed-item {
+    border: 1px solid #eee;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .my-feed-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .my-feed-item h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 0 10px;
+    word-wrap: break-word;
+  }
+  
