@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { AuthContext } from '../../context/AuthContext';
 
@@ -16,6 +17,7 @@ const FeedSection: React.FC = () => {
   const { user, loading } = useContext(AuthContext);
   const [feeds, setFeeds] = useState<Feed[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchFeeds = async () => {
@@ -38,6 +40,10 @@ const FeedSection: React.FC = () => {
     fetchFeeds();
   }, [user, loading]);
 
+  const handleImageClick = (id: string) => {
+    navigate(`/desk/${id}`);
+  };
+
   if (loading) {
     return <p>피드를 불러오는 중...</p>;
   }
@@ -48,7 +54,7 @@ const FeedSection: React.FC = () => {
       {feeds.length > 0 ? (
         <div className="my-feed-grid">
           {feeds.map((feed) => (
-            <div key={feed._id} className="my-feed-item">
+            <div key={feed._id} className="my-feed-item" onClick={() => handleImageClick(feed._id)}>
               <img
                 src={`http://localhost:5003/${feed.image}`} // uploads/ 경로 확인
                 alt={feed.title}

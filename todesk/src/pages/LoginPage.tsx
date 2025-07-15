@@ -23,7 +23,8 @@ const LoginPage: React.FC = () => {
   };
 
   return (
-    <div className="login-container">
+    <div className="loginLayout">
+          <div className="login-container">
       <div className="login-content">
         <h2 className="login-title">로그인</h2>
         <p className="login-subtitle">이메일과 비밀번호를 입력하세요</p>
@@ -63,6 +64,8 @@ const LoginPage: React.FC = () => {
         </form>
       </div>
     </div>
+    </div>
+
   );
 };
 

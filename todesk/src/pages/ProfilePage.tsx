@@ -41,7 +41,7 @@ const ProfilePage: React.FC = () => {
           정보 수정
         </div>
         <div className="menu-item" onClick={() => handleTabChange("1:1 문의")}>
-          1:1 문의
+          1:1 컨설팅
         </div>
 
         <div className="menu-item" onClick={() => handleTabChange("회원 탈퇴")}>

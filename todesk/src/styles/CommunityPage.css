@@ -1,6 +1,7 @@
 /* 페이지 전체 스타일 */
 .community-page {
     display: flex;
+    min-height : 80vh;
     flex-direction: column;
     align-items: center;
     padding: 40px 20px;

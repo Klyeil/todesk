@@ -1,0 +1,158 @@
+.consulting-page {
+    font-family: 'Arial', sans-serif;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #2c3e50;
+  }
+  
+  .consulting-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .consulting-header h1 {
+    font-size: 2.5em;
+    font-weight : 800;
+    margin-bottom: 10px;
+  }
+  
+  .consulting-header p {
+    font-size: 1.2em;
+    color: #7f8c8d;
+  }
+  
+  .consulting-box {
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .consulting-plans {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+  }
+
+  .plan-card1 {
+    width : 400px;
+    height : 430px;
+    background: #ffffff;
+    border: 3px solid #DDD;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .plan-card2 {
+    width : 400px;
+    height : 430px;
+    background: #ffffff;
+    border: 3px solid #4F46E5;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .plan-card1 h2 {
+    text-align : left;
+    font-size: 24px;
+    font-weight : 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .plan-card2 h2 {
+    text-align : left;
+    font-size: 24px;
+    font-weight : 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+
+  .plan-subtitle {
+    display : flex;
+    gap : 8px;
+    align-items: center;
+  }
+  
+
+  .plan-price {
+    font-size: 32px;
+    color: #000;
+    margin: 10px 0;
+    font-weight: 800;
+  }
+  .plan-price-sub {
+    font-size: 16px;
+    color: #000;
+    font-weight: 700;
+  }
+  
+  .plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    color: #000;
+  }
+  
+  .plan-features li {
+    font-size : 16px;
+    font-weight: 600;
+    color : #000;
+    margin: 24px 0;
+    text-align: left;
+    position: relative;
+  }
+  
+  
+
+  .plan-button2 {
+    background: #3b3e3e;
+    margin-top : 70px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+    height: 45px;
+
+  }
+  
+  .plan-button2:hover {
+    background: #000;
+  }
+  .plan-button {
+    background: #4F46E5;
+    margin-top : 70px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+    height: 45px;
+
+  }
+  
+  .plan-button:hover {
+    background: #4F46E5;
+  }
+
+
+  
+  .sub-description {
+    margin : 70px 0px 250px 260px;
+    text-align : left;
+    font-size : 16px;
+    font-weight : 400;
+    color : rgb(129, 137, 149);
+  }
+  
